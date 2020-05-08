@@ -1,80 +1,60 @@
 /*
 	Creator: Sam Kratzer
-	Date created: 6/19/2019
-	Date last modified: 6/19/2019
+	Date created: 5/7/2020
+	Date last modified: 5/7/2020
 */
 
 var go=document.getElementById("go");
 
-var two=document.getElementById("d2");
-var four=document.getElementById("d4");
-var six=document.getElementById("d6");
-var eight=document.getElementById("d8");
-var ten=document.getElementById("d10");
-var twelve=document.getElementById("d12");
-var twenty=document.getElementById("d20");
-var hundred=document.getElementById("d100");
+var one=document.getElementById("q1");
+var two=document.getElementById("q2");
+var three=document.getElementById("q3");
+var four=document.getElementById("q4");
+var five=document.getElementById("q5");
+var six=document.getElementById("q6");
+var seven=document.getElementById("q7");
+var eight=document.getElementById("q8");
+var nine=document.getElementById("q9");
 
-var modifier=document.getElementById("modifier");
-var advantage=document.getElementById("advantage");
+var text=document.getElementById("response");
+
 
 go.addEventListener("click", onClick);
 
 function onClick(){
-	console.log("click has occurred");
-	alert(roll());
+	text.innerHTML = response(getSum());
 }
 
-function roll(){
-	console.log(advantage.value);
-	if (advantage.value == "none"){
-		return rollAllDice();
-	}
-
-	else if (advantage.value == "advantage"){
-		var i = rollAllDice();
-		var j = rollAllDice();
-		if (i>j) return i;
-		else return j;
-	}
-
-	else if (advantage.value == "disadvantage"){
-		var i = rollAllDice();
-		var j = rollAllDice();
-		if (i<j) return i;
-		else return j;
-	}
-
-	else alert("unknown error occurred");
-}
-
-function rollAllDice(){
-	var d2=parseFloat(two.value) || 0;
-	var d4=parseFloat(four.value) || 0;
-	var d6=parseFloat(six.value) || 0;
-	var d8=parseFloat(eight.value) || 0;
-	var d10=parseFloat(ten.value) || 0;
-	var d12=parseFloat(twelve.value) || 0;
-	var d20=parseFloat(twenty.value) || 0;
-	var d100=parseFloat(hundred.value) || 0;
-
-	var mod = parseFloat(modifier.value) || 0;
-
-	var a = rollDice(d2, 2);
-	var b = rollDice(d4, 4);
-	var c = rollDice(d6, 6);
-	var d = rollDice(d8, 8);
-	var e = rollDice(d10, 10);
-	var f = rollDice(d12, 12);
-	var g = rollDice(d20, 20);
-	var h = rollDice(d100, 100);
-
-	var sum = a+b+c+d+e+f+g+h+mod;
+function getSum(){
+	var a1=parseFloat(one.value) || 0;
+	var a2=parseFloat(two.value) || 0;
+	var a3=parseFloat(three.value) || 0;
+	var a4=parseFloat(four.value) || 0;
+	var a5=parseFloat(five.value) || 0;
+	var a6=parseFloat(six.value) || 0;
+	var a7=parseFloat(seven.value) || 0;
+	var a8=parseFloat(eight.value) || 0;
+	var a9=parseFloat(nine.value) || 0;
+	var sum = a1+a2+a3+a4+a5+a6+a7+a8+a9;
 	return sum;
 }
 
-function rollDice(numDice, numSides){
-	var total=0
-	for (i=0; i<numDice; i++) total+=(Math.floor(Math.random()*numSides)+1);
-	return total;
+function response(number){
+	if (number == 0){
+	return "you didn't put anything in, dipshit.";
+	}
+
+	else if ((number > 0) && (number <= 25)){
+	return "your score is "+number+" ... you're a bit anxious";
+	}
+
+	else if ((number > 25) && (number <= 35)){
+	return "your score is "+number+" ... you're pretty anxious"; 
+	}
+
+	else if (number > 35){
+	return "your score is "+number+" ... wow, you're very anxious";
+	}
+
+	return "something weird happened"
 }

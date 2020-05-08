@@ -1,8 +1,28 @@
 /*
 	Creator: Sam Kratzer
-	Date created: 6/19/2019
-	Date last modified: 6/19/2019
+	Date created: 5/7/2020
+	Date last modified: 5/7/2020
 */
+#go {
+	opacity: 1.0;
+}
+
+#response {
+	font-size: 35px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.jumbotron {
+	background-color: #222222;
+	opacity: 0.95;
+	text-align: center;
+}
+
+
+.attribution {
+	font-size: 14px;
+}
 
 body {
 	color: #ffffff;
@@ -14,13 +34,6 @@ body {
 	background-position: center; /* Center the image */
  	background-repeat: no-repeat; /* Do not repeat the image */
 }
-
-.jumbotron {
-	background-color: #222222;
-	opacity: 0.95;
-	text-align: center;
-}
-
 
 nav {
 	padding-top: 6px;
@@ -47,10 +60,6 @@ div .form-control {
 	opacity: 0.6;
 }
 
-#go {
-	opacity: 1.0;
-}
-
 footer p {
 	padding-top: 8px;
 	margin: 8px;
@@ -63,8 +72,4 @@ footer {
 	width: 100%;
 	margin-top: 0px;
 	opacity: 0.95;
-}
-
-.attribution {
-	font-size: 14px;
 }
