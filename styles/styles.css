@@ -1,0 +1,70 @@
+/*
+	Creator: Sam Kratzer
+	Date created: 6/19/2019
+	Date last modified: 6/19/2019
+*/
+
+body {
+	color: #ffffff;
+
+	background-color: #ffffff;
+	background-image: url(images/office.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center; /* Center the image */
+ 	background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.jumbotron {
+	background-color: #222222;
+	opacity: 0.95;
+	text-align: center;
+}
+
+
+nav {
+	padding-top: 6px;
+	padding-bottom: 24px;
+	text-align: center;
+	opacity: 0.95;
+}
+
+nav .btn {
+	background-color: #222222;
+	color: #ffffff;
+	padding: 5px;
+}
+
+nav .btn:hover {
+	background-color: #ffffff;
+	color: #222222;}
+
+nav .btn:active {
+	font-weight: bold;
+}
+
+div .form-control {
+	opacity: 0.6;
+}
+
+#go {
+	opacity: 1.0;
+}
+
+footer p {
+	padding-top: 8px;
+	margin: 8px;
+}
+
+footer {
+	background-color: #222222;
+	padding-top: 0px;
+	padding-bottom: 15px;
+	width: 100%;
+	margin-top: 0px;
+	opacity: 0.95;
+}
+
+.attribution {
+	font-size: 14px;
+}
